@@ -14,17 +14,18 @@ sudo apt install python3.8
 sudo apt install python3.8-venv
 
 git clone <THIS REPOSITORY>
+cd <THIS REPOSITORY>
 
 python3.8 -m venv env
 source env/bin/activate
 pip install --upgrade pip
 pip install rasa --no-cache-dir
-rasa init
 
 rasa train
 
-rasa shell
+rasa run actions --actions actions &
 
+rasa shell
 ```
 
 Rasa CLI:  https://rasa.com/docs/rasa/command-line-interface
